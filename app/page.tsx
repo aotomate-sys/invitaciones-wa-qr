@@ -5,7 +5,7 @@ import Link from 'next/link'
 function Badge({ children }: { children: React.ReactNode }) { return <span className="badge"><Sparkles className="h-4 w-4" /> {children}</span> }
 
 export default function Page() {
-  const waNumber = '521234567890' // <-- CAMBIA ESTE NÚMERO (52 + tu número a 10 dígitos)
+  const waNumber = '+527208216689' // <-- CAMBIA ESTE NÚMERO (52 + tu número a 10 dígitos)
   const waText = encodeURIComponent('Hola, quiero mi invitación digital ✨')
   const waUrl = `https://wa.me/${waNumber}?text=${waText}`
 
