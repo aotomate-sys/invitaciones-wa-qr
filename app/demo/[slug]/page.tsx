@@ -11,12 +11,15 @@ export default function DemoPage({ params }: { params: { slug: string }}) {
     maps: 'https://maps.google.com',
     gallery: [1,2,3]
   }
+
   return (
     <main className="container py-10 space-y-8">
       <header className="text-center space-y-3">
         <h1 className="text-3xl md:text-4xl font-bold">{event.title}</h1>
         <div className="flex flex-col md:flex-row gap-2 items-center justify-center text-gray-600">
-          <div className="flex items-center gap-2"><Calendar className="h-4 w-4" /> {event.date}</div>
+          <div className="flex items-center gap-2">
+            <Calendar className="h-4 w-4" /> {event.date}
+          </div>
           <span className="hidden md:inline">•</span>
           <a
             href={event.maps}
