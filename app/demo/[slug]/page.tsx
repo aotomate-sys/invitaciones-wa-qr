@@ -1,6 +1,5 @@
 import RSVPForm from '@/components/RSVPForm'
 import QRShare from '@/components/QRShare'
-import Link from 'next/link'
 import { MapPin, Calendar } from 'lucide-react'
 
 export default function DemoPage({ params }: { params: { slug: string }}) {
@@ -19,9 +18,14 @@ export default function DemoPage({ params }: { params: { slug: string }}) {
         <div className="flex flex-col md:flex-row gap-2 items-center justify-center text-gray-600">
           <div className="flex items-center gap-2"><Calendar className="h-4 w-4" /> {event.date}</div>
           <span className="hidden md:inline">•</span>
-          <Link href={event.maps} className="flex items-center gap-2 underline">
+          <a
+            href={event.maps}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 underline"
+          >
             <MapPin className="h-4 w-4" /> {event.venue}
-          </Link>
+          </a>
         </div>
       </header>
 
