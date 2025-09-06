@@ -24,3 +24,4 @@ export function Button({ children, variant='primary', className='', ...props }:
   const v = variant === 'primary' ? 'btn btn-primary' : 'btn btn-outline'
   return <button className={`${v} ${className}`} {...props}>{children}</button>
 }
+Delete ui.tsx
